@@ -1,6 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<br>
-<br>
+<!-- HANDLES THE BLOG DETAILS -->
+<section class="jumbotron text-center">
+           <div class="container">
+               <h1 class="jumbotron-heading text-uppercase">ECH-TECH Blog</h1>
+               <hr>
+           </div>
+       </section>
+           <p class="container pt-1"><a href="{% url 'blog' %}" >Back</a></p>
+       <div class="album py-5 bg-light pt-2">
+           <div class="container">
+               <div class="row">
+                           <h6 class="text-center pb-3 text-uppercase">{{ blog.title }}</h6>
+                           <br>
+                           <img class="card-img-top" src="{{ blog.image.url }}" alt="Card image cap" height="500" width="300">
+                           <div class="card-body">
+                               <p class="card-text">{{ blog.body }}</p>
+                               <hr>
+                               {{ blog.pub_date_pretty }}
+                               <div class="d-flex justify-content-between align-items-center">
+                               </div>
+                           </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
 {% endblock %}
