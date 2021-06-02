@@ -3,10 +3,10 @@
 {% block content %}
 <!-- HANDLES THE STATIC IMAGE AND SKILLS PORTION -->
 <div class = "container-fluid" style = "background-color: #FFFFF0;">
-<div class="container pt-2">
+<div class="container">
 <div class="row">
-  <div class="col-md-4 pt-1">
-    <img src="{% static 'picture1.jpg' %}" class="rounded mx-auto d-block" alt="static image">
+  <div class="col-md-4 pt-5">
+    <img src="{% static 'picture1.jpg' %}" class="rounded mx-auto d-block pt-3" alt="static image">
     <div class="col-md-12 offset-md-0 text-center">
       <h3  class = "pt-1" style = "text-transform: uppercase; font-weight: bold; color: #BC8F8F;">about me</h3>
         <p style = "text-transform: capitalize; font-style: italic; font-size: 20px;">I'm Enekwe Chidiebere Henry. I'm a Python/Django developer and I love what I do !!!
@@ -31,30 +31,29 @@
 </div>
 <!-- HANDLES THE PROJECT PART -->
 <div class = "container-fluid" style = "background-color: #BC8F8F;">
-  <div class="album py-5">
-      <div class="container">
-          <div class="row">
-            <h3  style = "text-transform: uppercase; font-weight: bold; color: #FFFFF0; text-align: center;">projects</h3>
-            {% for project in projects.all %}
+  <div class="album pt-2">
+    <div class="container-fluid">
+      <div class="row">
+        <h3  style = "text-transform: uppercase; font-weight: bold; color: #FFFFF0; text-align: center;">projects</h3>
+          {% for project in projects.all %}
             <div class="col-md-6 pt-1">
-                <div class="card mb-4 box-shadow">
-                    <h5 class="pt-3" style = "text-transform: uppercase; font-weight: bold; text-align: center; color: #BC8F8F;">{{ project.title }}</h5>
-                    <hr>
-                    <img class="card-img-top image-fluid rounded-top rounded-bottom"
+              <div class="card mb-4 box-shadow">
+                <h5 class="pt-3" style = "text-transform: uppercase; font-weight: bold; text-align: center; color: #BC8F8F; text-decoration: underline;">{{ project.title }}</h5>
+                <img class="card-img-top image-fluid rounded-top rounded-bottom"
                         src="{{ project.image.url }}"
                         alt="Card image cap">
-                    <div class="card-body">
-                      <hr>
-                        <p class="card-text">{{ project.description }}</p>
-                        <hr>
-                        <p class="card-text" style = "text-transform: capitalize; text-align: center;">{{ project.tech_title }}</p>
-                        <p class="card-text" style = "text-transform: capitalize; text-align: center;">{{ project.teck_stack }}</p>
+              <div class="card-body">
+                  <hr>
+                  <p class="card-text">{{ project.description }}</p>
+                  <hr>
+                  <p class="card-text" style = "text-transform: capitalize; text-align: center;">{{ project.tech_title }}</p>
+                  <p class="card-text" style = "text-transform: capitalize; text-align: center;">{{ project.teck_stack }}</p>
                 </div>
             </div>
           </div>
           {% endfor %}
-          </div>
       </div>
+    </div>
   </div>
 </div>
 {% endblock %}
