@@ -1,0 +1,21 @@
+{% extends 'main_create.html' %}
+{% load static %}
+{% block content %}
+<main role="main">
+    <hr>
+    <div class="container-fluid pt-2">
+        <h2>Create Blog Post </h2>
+    </div>
+    <div class="container-fluid row g-3 align-items-center">
+        <hr>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <br>
+            <button type="submit" class="btn btn-primary">Create Post</button>
+        </form>
+    </div>
+</main>
+{% endblock %}

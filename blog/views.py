@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Blog
 from django.contrib.auth.decorators import login_required
+from .forms import BlogForm
 
 # Create your views here.
 
@@ -17,16 +18,14 @@ def detail(request, blog_id):
 
 @login_required
 def create(request):
-    return render(request, 'blog/create.html')
-    # form = ProductForm()
-
-    # if request.method == 'POST':
-    #     form = ProductForm(request.POST, request.FILES)
-
-    #     if form.is_valid():
-    #         form.save()
-
-    #         return redirect('home')
-
-    # context = {'form': form}
-    # return render(request, 'products/product_form.html', context)
+    form = BlogForm()
+    if request.method == 'POST':
+        form = BlogForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('blog')
+        else:
+            return render(request, 'blog/create.html')
+    else:
+        context = {'form': form}
+        return render(request, 'blog/blog_form.html', context)
