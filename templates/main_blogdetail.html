@@ -46,22 +46,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" style="text-transform: capitalize; font-style: italic;">
-                    {% if user.is_authenticated %}
-                    <a class="nav-link" href="{% url 'home' %}">Home</a>
-                    <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
-                    <a class="nav-link" href="{% url 'create' %}">Create Blogpost</a>
-                    <a class="nav-link" href="{% url 'codeacademy' %}">CodeAcademy</a>
-                    <a class="nav-link active" aria-current="page" href="{% url 'detail' blog.id %}">Blog Detail</a>
-                    <a class="nav-link" href="{% url 'blog' %}">Back"2"Blog</a>
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                    {% else %}
                     <a class="nav-link" href="{% url 'home' %}">Home</a>
                     <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
                     <a class="nav-link" href="{% url 'codeacademy' %}">CodeAcademy</a>
-                    <a class="nav-link active" aria-current="page" href="{% url 'detail' blog.id %}">Blog Detail</a>
-                    <a class="nav-link" href="{% url 'create' %}">Create Blogpost</a>
-                    <a class="nav-link" href="{% url 'blog' %}">Back"2"Blog</a>
-                    {% endif %}
                 </div>
             </div>
                 <!-- HANDLES THE NAV-BAR BRAND TEXT -->
@@ -69,6 +56,7 @@
                     style="text-transform: capitalize; font-style: italic; color: #FFFFF0;">ECH-Blog</a>
         </div>
     </nav>
+    <!-- HANDLES THE BLOG PAGE MINI-NAVBAR -->
     {% block content %}
     {% endblock %}
 
