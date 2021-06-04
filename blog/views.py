@@ -15,7 +15,7 @@ def detail(request, blog_id):
     return render(request, 'blog/detail.html', {'blog': blog_detail})
 
 
-# @login_required
+@login_required
 def create(request):
     return render(request, 'blog/create.html')
     # form = ProductForm()
