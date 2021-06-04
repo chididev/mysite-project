@@ -2,20 +2,20 @@
 {% load static %}
 {% block content %}
 <!-- HANDLES THE BLOG DETAILS -->
-<div class="jumbotron pt-5 pb-1" style = "background-color: #FFFFF0;">
+<div class="jumbotron pt-5 pb-1" style = "background-color: #FFFFFF;">
   <div class="container-fluid pt-3">
-    <h1 class="jumbotron-heading" style = "color: rgba(255, 94, 51, 1); text-transform: uppercase; font-weight:bold; text-align: center;">ech blog</h1>
+    <h1 class="jumbotron-heading" style = "color: #0487D5; text-transform: uppercase; font-weight:bold; text-align: center;">ech blog</h1>
   </div>
 </div>
-<div class="album pt-2" style = "background-color: #ff5e33;text-align: justify;">
+<div class="album pt-2" style = "background-color: #0487D5;text-align: justify;">
   <div class="container">
     <div class="row">
-     <h4 style="color: #FFFFF0; text-transform: capitalize; text-align:center; font-weight: bold; text-decoration: underline;">{{ blog.title }}</h4>
+     <h4 style="color: #FFFFFF; text-transform: capitalize; text-align:center;">{{ blog.title }}</h4>
      <img class="card-img-top image-fluid" src="{{ blog.image.url }}" alt="Card image cap" height="400" width="300">
       <div class="card-body">
-       <p class="card-text" style="font-size:18px; color: #FFFFF0; font-size: 20px;">{{ blog.body }}</p>
-       <hr style = "color: #FFFFF0;">
-       <p class="card-text" style="font-size:18px; color: #FFFFF0;">Created on {{ blog.pub_date_pretty }} by <span style = "text-transform: capitalize;">{{ user.username }}</span></p>
+       <p class="card-text" style="font-size:18px; color: #FFFFFF; font-size: 20px;">{{ blog.body }}</p>
+       <hr style = "color: #FFFFFF;">
+       <p class="card-text" style="font-size:18px; color: #FFFFFF;">Created on {{ blog.pub_date_pretty }} by <span style = "text-transform: capitalize;">{{ user.username }}</span></p>
       </div>
     </div>
   </div>
