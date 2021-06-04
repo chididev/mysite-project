@@ -1,24 +1,21 @@
-{% extends 'base.html' %}
+{% extends 'main_blogdetail.html' %}
 {% load static %}
 {% block content %}
 <!-- HANDLES THE BLOG DETAILS -->
 <div class="jumbotron pt-5 pb-1" style = "background-color: #FFFFF0;">
   <div class="container-fluid pt-3">
-    <a href="{% url 'portfolio' %}" >Portfolio</a>
-    &nbsp;
-    <a href="{% url 'blog' %}" >Back</a>
-    <h1 class="jumbotron-heading" style = "color: #BC8F8F; text-transform: uppercase; font-weight:bold; text-align: center;">ech blog</h1>
+    <h1 class="jumbotron-heading" style = "color: rgba(255, 94, 51, 1); text-transform: uppercase; font-weight:bold; text-align: center;">ech blog</h1>
   </div>
 </div>
-<div class="album pt-2" style = "background-color: #BC8F8F;text-align: justify;">
+<div class="album pt-2" style = "background-color: #ff5e33;text-align: justify;">
   <div class="container">
     <div class="row">
-     <h4 style="color: #FFFFF0; text-transform: uppercase; text-align:center; font-weight: bold;">{{ blog.title }}</h4>
-     <img class="card-img-top" src="{{ blog.image.url }}" alt="Card image cap" height="500" width="300">
+     <h4 style="color: #FFFFF0; text-transform: capitalize; text-align:center; font-weight: bold; text-decoration: underline;">{{ blog.title }}</h4>
+     <img class="card-img-top image-fluid" src="{{ blog.image.url }}" alt="Card image cap" height="400" width="300">
       <div class="card-body">
-       <p class="card-text" style="font-size:18px;">{{ blog.body }}</p>
-       <hr>
-       <p class="card-text" style="font-size:18px; color: #FFFFF0;">Created on {{ blog.pub_date_pretty }}</p>
+       <p class="card-text" style="font-size:18px; color: #FFFFF0; font-size: 20px;">{{ blog.body }}</p>
+       <hr style = "color: #FFFFF0;">
+       <p class="card-text" style="font-size:18px; color: #FFFFF0;">Created on {{ blog.pub_date_pretty }} by <span style = "text-transform: capitalize;">{{ user.username }}</span></p>
       </div>
     </div>
   </div>

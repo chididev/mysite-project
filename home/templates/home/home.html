@@ -1,0 +1,152 @@
+{% extends 'main_home.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid pt-5 pb-3" style="background-color: #FFFFF0;">
+    <div class="container">
+        <div class="row">
+            <h2 class="pt-3" style="text-transform: capitalize; font-weight: light-bold; text-align:center;"> hello, i'm enekwe
+                chidiebere henry
+            </h2>
+            <div class="col align-self-start">
+                <img src="{% static 'picture1.jpg' %}" class="rounded mx-auto d-block pt-3" alt="static image">
+            </div>
+            <div class="col align-self-center">
+                <h3 class="pt-3" style="text-transform: uppercase; font-weight: bold; color: rgba(255, 94, 51, 0.8); text-align:center; text-decoration: underline;">what i do
+                </h3>
+                <p style="text-transform:none ; font-style:normal; text-align:center; font-size: 20px;">I'm a fullstack developer(frontend and backend) with major focus on the Django Web Framework.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pb-3" style = "background-color: #ff5e33;">
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-center">
+                <h3 class = "pt-2" style="text-transform: uppercase; font-weight: bold; color: #FFFFF0; text-align:center; text-decoration: underline;"> more about me
+                </h3>
+                <p style="text-transform:none ; font-style:normal; text-align:center; font-size: 18px; color:#FFFFF0;">I build
+                    new projects just to tickle my brain and definitely enjoy teaching others how they are made. While i'm yet to make tutorial videos, I take interviews in search of a great team to work with.
+                </p>
+                <p style="text-transform:capitalize; font-style:normal; text-align:center; font-size: 18px; color:#FFFFF0; font-weight: bold;">Find me on twitter and github !!!
+                    <br>
+                    <br>
+                <a class="btn btn-outline-light text-center" href="https://github.com/chididev" target="_blank">Github</a>
+                &nbsp;
+                <a class="btn btn-outline-light" href="http://twitter.com/Chidiebere210" target="_blank"
+                    style="text-align: center;">Twitter</a>
+                </p>
+            </div>
+            <div class="col align-self-start">
+                <img src="{% static 'github.png' %}" class="rounded mx-auto d-block pt-3" alt="github image" height="200" width="400">
+                <img  src="{% static 'twitter.png' %}" class="rounded mx-auto d-block pt-3" alt="twitter image" height="200" width="400">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pb-2" style="background-color: #FFFFF0;">
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-center">
+                <h3 class="pt-2"
+                    style="text-transform: uppercase; font-weight: bold; color: rgba(255, 94, 51, 0.8); text-align:center; text-decoration: underline;">
+                    portfolio & past projects
+                </h3>
+                <div class="album">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4 pt-1">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top image-fluid rounded-top rounded-bottom" src="{% static 'search-engine.png' %}" alt="Card image cap" height="300" width="500">
+                                    <div class="card-body">
+                                        <a class="btn btn-outline-dark" href="https://github.com/chididev?tab=repositories" target="_blank"
+                                            style="text-align: center;">View more and the source code >></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 pt-1">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top image-fluid rounded-top rounded-bottom" src="{% static 'views.png' %}" alt="Card image cap" height="300" width="500">
+                                    <div class="card-body">
+                                        <a class="btn btn-outline-dark" href="https://github.com/chididev?tab=repositories" target="_blank"
+                                            style="text-align: center;">View more and the source code >></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 pt-1">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top image-fluid rounded-top rounded-bottom" src="{% static 'authentication-project.png' %}" alt="Card image cap" height="300" width="500">
+                                    <div class="card-body">
+                                        <a class="btn btn-outline-dark" href="https://github.com/chididev?tab=repositories" target="_blank"
+                                            style="text-align: center;">View more and the source code >> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="text-transform:capitalize; font-style:normal; text-align:center;"><a class="btn btn-outline-dark text-center" href="{% url 'portfolio' %}" target="_blank">Go to my portfolio</a>
+    </p>
+</div>
+<div class="container-fluid pb-2" style="background-color: #ff5e33;">
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-center">
+                <h3 class="pt-2"
+                    style="text-transform: uppercase; font-weight: bold; color: #FFFFF0; text-align:center; text-decoration: underline;">
+                    my developer story
+                </h3>
+                    <img class="card-img-top image-fluid rounded-top rounded-bottom pb-2" src="{% static 'search-engine.png' %}" alt="Card image cap" height="300" width="500">
+                    
+            </div>
+        </div>
+    </div>
+    <p style="text-transform:capitalize; font-style:normal; text-align:center;"><a class="btn btn-outline-light text-center"
+            href="{% url 'blog' %}" target="_blank">Go to blog</a>
+    </p>
+</div>
+<div class="container-fluid pb-2" style="background-color: #FFFFF0;">
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-center">
+                <h3 class="pt-2"
+                    style="text-transform: uppercase; font-weight: bold; color: rgba(255, 94, 51, 0.8); text-align:center; text-decoration: underline;">
+                    our python/django tutorials
+                </h3>
+                <div class="album">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4 pt-1">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top image-fluid rounded-top rounded-bottom"
+                                        src="{% static 'search-engine.png' %}" alt="Card image cap" height="300"
+                                        width="500">
+                                </div>
+                            </div>
+                            <div class="col-md-4 pt-1">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top image-fluid rounded-top rounded-bottom"
+                                        src="{% static 'views.png' %}" alt="Card image cap" height="300" width="500">
+                                </div>
+                            </div>
+                            <div class="col-md-4 pt-1">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top image-fluid rounded-top rounded-bottom"
+                                        src="{% static 'authentication-project.png' %}" alt="Card image cap"
+                                        height="300" width="500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="text-transform:capitalize; font-style:normal; text-align:center;"><a
+            class="btn btn-outline-dark text-center" href="{% url 'codeacademy' %}">learn to code</a>
+    </p>
+</div>
+{% endblock %}

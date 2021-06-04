@@ -1,28 +1,19 @@
-{% extends 'base.html' %}
+{% extends 'main_portfolio.html' %}
 {% load static %}
 {% block content %}
 <!-- HANDLES THE STATIC IMAGE AND SKILLS PORTION -->
-<div class = "container-fluid" style = "background-color: #FFFFF0;">
-<div class="container">
+<div class = "container-fluid pt-5 pb-3" style = "background-color: #FFFFF0;">
+<div class="container-fluid pt-3 pb-2">
 <div class="row">
-  <div class="col-md-4 pt-5">
-    <img src="{% static 'picture1.jpg' %}" class="rounded mx-auto d-block pt-3" alt="static image">
-    <div class="col-md-12 offset-md-0 text-center">
-      <h3  class = "pt-1" style = "text-transform: uppercase; font-weight: bold; color: #BC8F8F;">about me</h3>
-        <p style = "text-transform: capitalize; font-style: italic; font-size: 20px;">I'm Enekwe Chidiebere Henry. I'm a Python/Django developer and I love what I do !!!
-          <br>
-        <a href="mailto:chidieberehenry31@gmail.com" class="btn my-2" style = "background-color: #BC8F8F; font-style: normal; text-transform: uppercase; font-weight: bold;">Email Me</a>
-        </p>
-    </div>
-  </div>
-    <div class="col-md-7 offset-md-5 pb-3">
-      <h3  style = "text-transform: uppercase; font-weight: bold; color: #BC8F8F;">skills</h3>
+    <div class="col-md-12">
+      <h3  style = "text-transform: uppercase; font-weight: bold; color: #ff5e33; text-decoration: underline;">expertise</h3>
       <ul class="list-group list-group-flush" style = "text-transform: capitalize; font-size: 18px;">
         <li class="list-group-item">python</li>
         <li class="list-group-item">django web framework</li>
         <li class="list-group-item">bootstrap 5</li>
         <li class="list-group-item">html5</li>
         <li class="list-group-item">css3</li>
+        <li class="list-group-item">git</li>
         <li class="list-group-item">heroku</li>
         <li class="list-group-item">mysql</li>
         <li class="list-group-item">postgresql</li>
@@ -32,26 +23,26 @@
 </div>
 </div>
 <!-- HANDLES THE PROJECT PART -->
-<div class = "container-fluid" style = "background-color: #BC8F8F;">
+<div class = "container-fluid" style = "background-color: #ff5e33;">
   <div class="album pt-2">
     <div class="container-fluid">
       <div class="row">
-        <h3  style = "text-transform: uppercase; font-weight: bold; color: #FFFFF0; text-align: center;">projects</h3>
+        <h3  style = "text-transform: capitalize; font-weight: bold; color: #FFFFF0; text-align: center; text-decoration: underline;">click below  to view source codes</h3>
           {% for project in projects.all %}
-            <div class="col-md-6 pt-1">
+            <div class="col-md-3 pt-1">
+              <a class = "btn" href="https://github.com/chididev?tab=repositories" target="_blank">
               <div class="card mb-4 box-shadow">
-                <h5 class="pt-3" style = "text-transform: uppercase; font-weight: bold; text-align: center; color: #BC8F8F; text-decoration: underline;">{{ project.title }}</h5>
+                <h5 class="pt-3" style = "text-transform: uppercase; font-weight: bold; text-align: center; color: #ff5e33; text-decoration: underline;">{{ project.title }}</h5>
                 <img class="card-img-top image-fluid rounded-top rounded-bottom"
                         src="{{ project.image.url }}"
                         alt="Card image cap">
               <div class="card-body">
                   <hr>
-                  <p class="card-text">{{ project.description }}</p>
-                  <hr>
                   <p class="card-text" style = "text-transform: capitalize; text-align: center;">{{ project.tech_title }}</p>
                   <p class="card-text" style = "text-transform: capitalize; text-align: center;">{{ project.teck_stack }}</p>
                 </div>
             </div>
+            </a>
           </div>
           {% endfor %}
       </div>
