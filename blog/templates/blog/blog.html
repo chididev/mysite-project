@@ -8,7 +8,7 @@
     <p class="lead text-muted" style = "text-transform:capitalize; text-align: center;">welcome to ECH blog!!!</p>  
   </div>
   </div>
-<div class = "container-fluid pt-2 pb-2" style = "background-color: #ff5e33; text-transform:uppercase; font-weight: bold; text-align: center; color: #FFFFF0">
+<div class = "container-fluid pt-2 pb-2" style = "background-color: #ff5e33; text-transform:uppercase; text-align: center; color: #FFFFF0">
   <h2>blog posts</h2>
 </div>
 <div class="album" style = "background-color: #ff5e33;">
@@ -17,7 +17,7 @@
       {% for blog in blogs.all %}
           <div class="col-md-2">
             <div class="card mb-4 box-shadow">
-              <h5 class="pt-3" style = "text-transform: uppercase; text-align: center;">{{ blog.title }}</h5>
+              <h5 class="pt-3" style = "text-transform: capitalize; text-align: center;">{{ blog.title }}</h5>
               <img class="card-img-top img-fluid" src="{{ blog.image.url }}" alt="Card image cap" height=100 width =100>
             <div class="card-body">
               <p class="card-text">{{ blog.summary }}</p>

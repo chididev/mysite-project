@@ -37,13 +37,13 @@
 <!-- HANDLES THE NAVBAR -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: rgba(255, 94, 51, 1);">
     <div class="container-fluid">
-        <!-- THE BUTTON TAGE HANDLES THE TOGGLER -->
+        <!-- THE BUTTON TAG HANDLES THE TOGGLER -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav" style="text-transform: capitalize; font-style: italic; font-weight: bold;">
+            <div class="navbar-nav" style="text-transform: capitalize; font-style: italic;">
                 <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                 <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
                 <a class="nav-link" href="{% url 'blog' %}">Blog</a>
@@ -62,7 +62,7 @@
     <!-- HANDLES THE FOOTER -->
 <div class="conteiner-fluid" style="text-transform: capitalize; background-color: #ff5e33;">
     <footer class="text-muted pt-3 pb-2">
-        <div class="container text-center" style="text-transform: uppercase; color: #FFFFF0;">
+        <div class="container text-center" style="text-transform: capitalize; color: #FFFFF0;">
             <p>&copy;Enekwe Chidiebere Henry {% now "Y" %}</p>
         </div>
    </footer>
