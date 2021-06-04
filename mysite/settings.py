@@ -55,7 +55,13 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    # DJANGO CRISPY FORM
+    'crispy_forms',
 ]
+
+# DJANGO CRISPY FORM CONFIGURATIONS
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # DJANGO ALL-AUTH AUTHENTICATION BACKEND
 AUTHENTICATION_BACKENDS = [
