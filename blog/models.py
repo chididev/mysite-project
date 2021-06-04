@@ -10,6 +10,7 @@ class Blog(models.Model):
     image = models.ImageField(upload_to='images/', null=True)
     body = models.TextField(null=True)
     blogger = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    votes_total = models.IntegerField(default=1, null=True)
 
     def __str__(self):
         return self.title
