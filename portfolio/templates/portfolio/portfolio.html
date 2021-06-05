@@ -6,8 +6,8 @@
 <div class="container-fluid">
 <div class="row">
     <div class="col-md-12">
-      <h3  style = "text-transform: capitalize; color: #0487D5;">expertise</h3>
-      <ul class="list-group list-group-flush" style = "text-transform: capitalize; font-size: 18px;">
+      <h3  style = "text-transform: capitalize; color: #0487D5; font-size:18px;">expertise</h3>
+      <ul class="list-group list-group-flush" style = "text-transform: capitalize; font-size: 13px;">
         <li class="list-group-item">python</li>
         <li class="list-group-item">django web framework</li>
         <li class="list-group-item">bootstrap 5</li>
@@ -27,19 +27,19 @@
   <div class="album pt-2">
     <div class="container">
       <div class="row">
-        <h3  style = "text-transform: capitalize; color: #FFFFFF; text-align: center;">click below  to view source codes</h3>
+        <h3  style = "text-transform: capitalize; color: #FFFFFF; text-align: center; font-size:20px;">click below  to view source codes</h3>
           {% for project in projects.all %}
             <div class="col-md-3 pt-1">
               <a class = "btn" href="https://github.com/chididev?tab=repositories" target="_blank">
               <div class="card mb-4 box-shadow">
-                <h5 class="pt-3" style = "text-transform: uppercase; font-weight: bold; text-align: center; color: #0487D5; text-decoration: underline;">{{ project.title }}</h5>
+                <h5 class="pt-3" style = "text-transform: capitalize; font-weight: bold; text-align: center; color: #0487D5; font-size:15px;">{{ project.title }}</h5>
                 <img class="card-img-top image-fluid rounded-top rounded-bottom"
                         src="{{ project.image.url }}"
-                        alt="Card image cap">
+                        alt="Card image cap" height="200" width="400">
               <div class="card-body">
                   <hr>
-                  <p class="card-text" style = "text-transform: capitalize; text-align: center;">{{ project.tech_title }}</p>
-                  <p class="card-text" style = "text-transform: capitalize; text-align: center;">{{ project.teck_stack }}</p>
+                  <p class="card-text" style = "text-transform: capitalize; text-align: center; font-size:13px;">{{ project.tech_title }}</p>
+                  <p class="card-text" style = "text-transform: capitalize; text-align: center; font-size:13px;">{{ project.teck_stack }}</p>
                 </div>
             </div>
             </a>
