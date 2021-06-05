@@ -14,16 +14,13 @@ def contact(request):
                 'first_name': form.cleaned_data['first_name'],
                 'last_name': form.cleaned_data['last_name'],
                 'email': form.cleaned_data['email_address'],
-                # 'subject': form.cleaned_data['subject'],
                 'message': form.cleaned_data['message'],
             }
             message = "\n".join(body.values())
 
             try:
                 send_mail(subject, message, 'admin@example.com',
-                          ['admin@example.com'],
-                          #   fail_silently=False,
-                          )
+                          ['admin@example.com'],)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('home')
