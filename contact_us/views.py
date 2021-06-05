@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
+from django.conf import settings
 
 
 # Create your views here.
@@ -19,8 +20,9 @@ def contact(request):
             message = "\n".join(body.values())
 
             try:
-                send_mail(subject, message, 'admin@example.com',
-                          ['admin@example.com'],)
+                send_mail(subject, message, 'settings.EMAIL_HOST_USER',
+                          ['chidihenry2018@outlook.com'],
+                          fail_silently=False)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('home')
