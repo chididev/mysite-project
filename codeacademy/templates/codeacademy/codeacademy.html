@@ -1,8 +1,116 @@
 {% extends 'main_codeacademy.html' %}
 {% load static %}
 {% block content %}
-<div class="container-fluid pt-3 pb-2">
-    <h1>PAGE UNDER CONSTRUCTION!!!</h1>
+<div class="container-fluid pt-3 pb-3" style="background-color: #FFFFFF;">
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-center">
+                <h3 style="text-transform: capitalize; color: #0487D5; text-align:center; font-size:20px;">
+                    your career as a developer starts here
+                </h3>
+                <p style="text-transform:none ; font-style:normal; text-align:center; font-size: 16px;">This is the website we wish we
+                    had when we were learning on our own. We scour the internet looking for only the best
+                    resources to supplement your learning and present them in a logical order.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
-    
+<div class="container-fluid pb-3" style="background-color: #0487D5;">
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-center">
+                <div class="container">
+                <h3 class="pt-2"
+                    style="text-transform: capitalize; color: #FFFFFF; text-align:center; font-size: 20px;"> how it works
+                </h3>
+                <p style="text-transform:none ; font-style:normal; text-align:justify; font-size: 16px; color: black;">Coding doesn’t have to be hard or take forever to learn. My easy to follow videos will walk you step by step through
+                some of the most popular programming languages for web development. Each course centers around a single project. Follow along and build what I build and you’ll learn how to code, and also
+                have a cool project for your portfolio and resume! Watch the videos as quickly or as slowly as you like! There are no time limits, and I’m adding new courses all the time.
+                Members get all the future course at no extra charge! f you get stuck along the way, don’t understand something, or just need a little help – post your questions under any
+                video. I’m always here to help in any way I can!
+                I want to make sure you really understand this stuff and so I’m here to help if you need it! That’s what makes
+                Codemy.com different from so many other websites…
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pb-2" style="background-color: #FFFFFF;">
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-center">
+                <h3 class="pt-2"
+                    style="text-transform: capitalize; color: #0487D5; text-align:center; font-size: 20px;"> courses available
+                </h3>
+                <div class="album">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3 pt-1">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top image-fluid rounded-top rounded-bottom"
+                                        src="{% static 'html2.jpg' %}" alt="Card image cap" height="100"
+                                        width="200">
+                                    <div class="card-body">
+                                        <a class="btn btn-outline-primary btn-sm" href="{% url 'html' %}">Get started with html5</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 pt-1">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top image-fluid rounded-top rounded-bottom"
+                                        src="{% static 'css.jpg' %}" alt="Card image cap" height="100" width="200">
+                                    <div class="card-body">
+                                        <a class="btn btn-outline-primary btn-sm" href="{% url 'css' %}">Get started with css3</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 pt-1">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top image-fluid rounded-top rounded-bottom"
+                                        src="{% static 'python.jpg' %}" alt="Card image cap" height="100" width="200">
+                                    <div class="card-body">
+                                        <a class="btn btn-outline-primary btn-sm" href="{% url 'python' %}">Get started with python</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 pt-1">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top image-fluid rounded-top rounded-bottom" src="{% static 'django2.jpg' %}"
+                                        alt="Card image cap" height="100" width="200">
+                                    <div class="card-body">
+                                        <a class="btn btn-outline-primary btn-sm" href="{% url 'django' %}">Get started with django</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-3 pb-3" style="background-color: #0487D5;">
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-center">
+                <h3 style="text-transform: capitalize; color: #FFFFFF; text-align:center; font-size:18px;">
+                    connect with us on social media
+                </h3>
+                <p
+                    style="text-transform:capitalize; font-style:normal; text-align:center; font-size: 16px; color:#FFFFFF; font-size: 16px;">
+                    <br>
+                    <a class="btn btn-outline-light btn-sm text-center" href="https://github.com/chididev" target="_blank">Github</a>
+                    &nbsp;
+                    <a class="btn btn-outline-light btn-sm" href="http://twitter.com/Chidiebere210" target="_blank"
+                        style="text-align: center;">Twitter</a>
+                    &nbsp;
+                    <a class="btn btn-outline-light btn-sm" href="https://www.instagram.com/chidi_henry31/" target="_blank"
+                        style="text-align: center;">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
