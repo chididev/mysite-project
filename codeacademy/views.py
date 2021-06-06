@@ -48,4 +48,4 @@ def django(request):
 
 def django_detail(request, django_id):
     django_detail = get_object_or_404(Django, pk=django_id)
-    return render(request, 'codeacademy/python_detail.html', {'django': django_detail})
+    return render(request, 'codeacademy/django_detail.html', {'django': django_detail})
