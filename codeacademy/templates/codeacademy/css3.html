@@ -1,0 +1,29 @@
+{% extends 'main_courses.html' %}
+{% load static %}
+{% block content %}
+<div class="album" style="background-color: #FFFFFF;">
+    <div class="container-fluid pt-2">
+        <div class="row">
+            {% for css in csss.all %}
+            <div class="container">
+                <div class="col-md-3">
+                    <div class="card mb-4 box-shadow">
+                        <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:14px;">{{
+                            css.title }}</h5>
+                        <img class="card-img-top" src="{{ css.image.url }}" alt="Card image cap" height=100 width=100>
+                        <div class="card-body">
+                            <p class="card-text" style="font-size: 12px; text-align: justify;">{{ css.summary }}</p>
+                            <hr>
+                            <p><a class="btn btn-sm btn-outline-primary" href="{% url 'css_detail' css.id %}"
+                                    style="font-size: 10px;">Study</a>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
