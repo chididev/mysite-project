@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from codeacademy.views import html_detail
+from codeacademy.views import *
 
 urlpatterns = [
     path('', views.codeacademy, name='codeacademy'),

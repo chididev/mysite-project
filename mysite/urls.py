@@ -26,4 +26,5 @@ urlpatterns = [
     path('codeacademy/', include('codeacademy.urls')),
     path('accounts/', include('allauth.urls')),
     path('contact/', include('contact_us.urls')),
+    path('css3/', include('cssacademy.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
