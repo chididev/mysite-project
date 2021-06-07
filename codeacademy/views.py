@@ -12,6 +12,6 @@ def html(request):
     return render(request, 'codeacademy/html5.html', {'htmls': htmls})
 
 
-def htmldetail(request, html_id):
-    htmldetail = get_object_or_404(Html, pk=html_id)
-    return render(request, 'html/htmldetail.html', {'html': htmldetail})
+def html_detail(request, html_id):
+    html_detail = get_object_or_404(Html, pk=html_id)
+    return render(request, 'codeacademy/html_detail.html', {'html': html_detail})
