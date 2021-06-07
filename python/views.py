@@ -5,6 +5,7 @@ from .models import *
 # Create your views here.
 
 
+@login_required
 def python(request):
     pythons = Python.objects.all().order_by('-id')
     return render(request, 'python/python.html', {'pythons': pythons})

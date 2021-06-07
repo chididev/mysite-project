@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from .models import *
 
 
+@login_required
 def django(request):
     djangos = Django.objects.all().order_by('-id')
     return render(request, 'djangocourse/django.html', {'djangos': djangos})

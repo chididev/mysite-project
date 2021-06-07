@@ -5,6 +5,7 @@ from .models import *
 # Create your views here.
 
 
+@login_required
 def css(request):
     csss = Css.objects.all().order_by('-id')
     return render(request, 'cssacademy/css3.html', {'csss': csss})

@@ -7,6 +7,7 @@ def codeacademy(request):
     return render(request, 'codeacademy/codeacademy.html')
 
 
+@login_required
 def html(request):
     htmls = Html.objects.all().order_by('-id')
     return render(request, 'codeacademy/html5.html', {'htmls': htmls})
