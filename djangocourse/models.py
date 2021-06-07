@@ -1,10 +1,9 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 # Create your models here.
 
 
-class Html(models.Model):
+class Django(models.Model):
     title = models.CharField(max_length=500, null=True)
     image = models.ImageField(upload_to='images/', null=True)
     body = models.TextField(null=True)

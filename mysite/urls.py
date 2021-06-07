@@ -28,4 +28,5 @@ urlpatterns = [
     path('contact/', include('contact_us.urls')),
     path('css3/', include('cssacademy.urls')),
     path('python/', include('python.urls')),
+    path('django/', include('djangocourse.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

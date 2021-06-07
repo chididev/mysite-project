@@ -1,0 +1,33 @@
+{% extends 'main_courses.html' %}
+{% load static %}
+{% block content %}
+<div class="album" style="background-color: #FFFFFF;" id="#">
+    <div class="container-fluid">
+        <div class="container pt-2" style="text-align:center; color:#0487D5; ">
+            <h1><span style="text-transform:uppercase;">django</span> course</h1>
+            <div class="row">
+                {% for django in djangos.all %}
+                <div class="col-md-3">
+                    <div class="card mb-4 box-shadow">
+                        <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:18px;">{{ django.title }}</h5>
+                        <img class="card-img-top" src="{{ django.image.url }}" alt="Card image cap" height=100 width=100>
+                        <div class="card-body">
+                            <p class="card-text" style="text-align: justify; color:black; ">{{ django.summary }}</p>
+                            <hr>
+                            <p><a class="btn btn-sm btn-outline-primary" href="{% url 'django_detail' django.id %}"
+                                    style="font-size: 12px;">study</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <p><a class="btn btn-sm btn-outline-primary" href="{% url 'codeacademy' %}"
+                        style="font-size: 16px;">Back "2" CodeAcademy</a>
+                    &nbsp;
+                    <a class="btn btn-sm btn-outline-primary" href="#" style="font-size: 16px;"> Back "2" Top</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'contact_us',
     'cssacademy',
     'python',
+    'djangocourse',
 
     # DJANGO ALL-AUTH APPS
     'django.contrib.sites',
