@@ -1,22 +1,15 @@
 {% extends 'main_blogdetail.html' %}
 {% load static %}
 {% block content %}
-<!-- HANDLES THE BLOG DETAILS -->
-<div class="jumbotron pt-2 pb-1" style = "background-color: #FFFFFF;">
-  <div class="container-fluid">
-    <h1 class="jumbotron-heading" style = "color: #0487D5; text-transform: uppercase; font-weight:bold; text-align: center;">ech blog</h1>
-  </div>
-  <!-- HANDLES THE BLOG PAGE MINI-NAVBAR -->
+<div class="album pt-2" style = "background-color:#FFFFFF;text-align: justify;">
   <div class="container-fluid pb-2">
     <a class="btn btn-outline-primary btn-sm" href="{% url 'create' %}" style="font-size: 12px;">Create BlogPost</a>
     <a class="btn btn-outline-primary btn-sm" href="{% url 'blog' %}" style="font-size: 12px;">Back"2"Blog</a>
   </div>
-</div>
-<div class="album pt-2" style = "background-color: #0487D5;text-align: justify;">
   <div class="container">
     <div class="row">
     <div class="col-md-12">
-      <h4 style="text-transform: capitalize; text-align: center; font-size:18px; color: #FFFFFF;">{{ blog.title }}</h4>
+      <h4 style="text-transform: capitalize; text-align: center; font-size:18px; color: #0487D5;">{{ blog.title }}</h4>
       <div class="card mb-4 box-shadow">
         <img class="card-img-top image-fluid" src="{{ blog.image.url }}" alt="Card image cap" height=300 width=400>
         <div class="card-body">

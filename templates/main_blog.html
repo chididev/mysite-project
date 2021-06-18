@@ -52,6 +52,7 @@
                 <div class="navbar-nav" style="text-transform: capitalize; font-style: italic;">
                     <a class="nav-link" href="{% url 'home' %}">Home</a>
                     <a class="nav-link" href="{% url 'portfolio' %}">Projects</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Blog</a>
                     <a class="nav-link" href="{% url 'codeacademy' %}">CodeAcademy</a> 
                     <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                 </div>
@@ -62,9 +63,9 @@
     {% endblock %}
 
     <!-- HANDLES THE FOOTER -->
-    <div class="conteiner-fluid" style="text-transform: capitalize; background-color: #FFFFFF;">
+    <div class="conteiner-fluid" style="text-transform: capitalize; background-color: #0487D5;">
         <footer class="text-muted pt-3 pb-2">
-            <div class="container text-center" style="text-transform: capitalize; color: #0487D5;">
+            <div class="container text-center" style="text-transform: capitalize; color: #FFFFFF;">
                 <p>&copy;Enekwe Chidiebere Henry {% now "Y" %}</p>
             </div>
         </footer>

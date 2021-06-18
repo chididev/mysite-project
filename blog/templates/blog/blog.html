@@ -1,21 +1,13 @@
 {% extends 'main_blog.html' %}
 {% load static %}
 {% block content %}
-<!-- HANDLES THE BLOG PAGE -->
-<div class="jumbotron" style = "background-color: #FFFFFF;">
-  <div class="container-fluid">
-    <h1 class="jumbotron-heading" style = "color: #0487D5; text-transform: uppercase; font-weight:bold; text-align: center;">ech blog</h1>      
-    <p class="lead text-muted" style = "text-transform:capitalize; text-align: center; font-size: 15px;">welcome to ECH blog!!!</p>  
-  </div>
-  <!-- HANDLES THE BLOG PAGE MINI-NAVBAR -->
-  <div class="container-fluid pb-2">
-    <a class="btn btn-outline-primary btn-sm" href="{% url 'create' %}" style="font-size: 12px;">Create BlogPost</a>
-  </div>
-  </div>
-<div class = "container-fluid pt-2 pb-2" style = "background-color: #0487D5; text-transform:capitalize; text-align: center; color: #FFFFFF">
+<div class = "container-fluid pt-2 pb-2" style = "background-color: #FFFFFF; text-transform:capitalize; text-align: center; color: #0487D5">
   <h2 style="font-size:18px;">blog posts</h2>
 </div>
-<div class="album" style = "background-color: #0487D5;">
+<div class="container-fluid pt-2 pb-3">
+  <a class="btn btn-outline-primary btn-sm" href="{% url 'create' %}" style="font-size: 12px;">Create BlogPost</a>
+</div>
+<div class="album" style = "background-color: #FFFFFF;">
   <div class="container-fluid">
     <div class="row">
       {% for blog in blogs.all %}
