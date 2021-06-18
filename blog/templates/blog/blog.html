@@ -4,9 +4,6 @@
 <div class = "container-fluid pt-2 pb-2" style = "background-color: #FFFFFF; text-transform:capitalize; text-align: center; color: #0487D5">
   <h2 style="font-size:18px;">blog posts</h2>
 </div>
-<div class="container-fluid pt-2 pb-3">
-  <a class="btn btn-outline-primary btn-sm" href="{% url 'create' %}" style="font-size: 12px;">Create BlogPost</a>
-</div>
 <div class="album" style = "background-color: #FFFFFF;">
   <div class="container-fluid">
     <div class="row">
@@ -27,6 +24,9 @@
         </div>
       {% endfor %}
     </div>
+  </div>
+  <div class="container-fluid pt-2 pb-3">
+    <a class="btn btn-outline-primary btn-sm" href="{% url 'create' %}" style="font-size: 12px;">Create BlogPost</a>
   </div>
 </div>
 {% endblock %}
