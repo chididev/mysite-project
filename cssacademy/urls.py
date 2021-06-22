@@ -1,8 +1,8 @@
 from django.urls import path
 from . import views
-from cssacademy.views import *
+from django.views.generic import *
 
 urlpatterns = [
-    path('css/', views.css, name='css'),
-    path('<int:css_id>/', views.css_detail, name="css_detail"),
+    path('css/', views.CssView.as_view(), name='css'),
+    path('<pk>/css_detail/', views.CssDetail.as_view(), name="css_detail"),
 ]

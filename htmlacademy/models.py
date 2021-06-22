@@ -1,10 +1,9 @@
 from django.db import models
 from django.urls import reverse
-
 # Create your models here.
 
 
-class Python(models.Model):
+class Html(models.Model):
     title = models.CharField(max_length=500, null=True)
     image = models.ImageField(upload_to='images/', null=True)
     body = models.TextField(null=True)
@@ -16,4 +15,4 @@ class Python(models.Model):
         return self.body[:100]
 
     def get_absolute_url(self):
-        return reverse("python_detail", kwargs={"pk": self.pk})
+        return reverse("html_detail", kwargs={"pk": self.pk})

@@ -1,27 +1,29 @@
 {% extends 'main_blog.html' %}
 {% load static %}
 {% block content %}
-<div class = "container-fluid pt-2 pb-2" style = "background-color: #FFFFFF; text-transform:capitalize; text-align: center; color: #0487D5">
+<div class="container-fluid pt-2 pb-2"
+  style="background-color: #FFFFFF; text-transform:capitalize; text-align: center; color: #0487D5">
   <h2 style="font-size:18px;">blog posts</h2>
 </div>
-<div class="album" style = "background-color: #FFFFFF;">
+<div class="album" style="background-color: #FFFFFF;">
   <div class="container-fluid">
     <div class="row">
       {% for blog in blogs.all %}
-          <div class="col-md-3">
-            <div class="card mb-4 box-shadow">
-              <h5 class="pt-3" style = "text-transform: capitalize; text-align: center; font-size:15px;">{{ blog.title }}</h5>
-              <img class="card-img-top" src="{{ blog.image.url }}" alt="Card image cap" height=100 width =100>
-            <div class="card-body">
-              <p class="card-text">{{ blog.summary }}</p>
-              <hr>
-              <p><a class="btn btn-sm btn-outline-primary" href="{% url 'detail' blog.id %}" style="font-size: 12px;">Read</a>
-                <br>
-                <p style="font-size: 11px;">{{ blog.pub_date_pretty }}</p>
-              </p>
-            </div>
+      <div class="col-md-3">
+        <div class="card mb-4 box-shadow">
+          <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:15px;">{{ blog.title }}</h5>
+          <img class="card-img-top" src="{{ blog.image.url }}" alt="Card image cap" height=100 width=100>
+          <div class="card-body">
+            <p class="card-text">{{ blog.summary }}</p>
+            <hr>
+            <p><a class="btn btn-sm btn-outline-primary" href="{% url 'detail' blog.pk %}"
+                style="font-size: 12px;">Read</a>
+              <br>
+            <p style="font-size: 11px;">{{ blog.pub_date_pretty }}</p>
+            </p>
           </div>
         </div>
+      </div>
       {% endfor %}
     </div>
   </div>

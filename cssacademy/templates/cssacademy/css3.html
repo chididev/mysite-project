@@ -9,19 +9,21 @@
                 {% for css in csss.all %}
                 <div class="col-md-3">
                     <div class="card mb-4 box-shadow">
-                        <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:18px;">{{ css.title }}</h5>
+                        <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:18px;">{{
+                            css.title }}</h5>
                         <img class="card-img-top" src="{{ css.image.url }}" alt="Card image cap" height=100 width=100>
                         <div class="card-body">
                             <p class="card-text" style="text-align: justify; color:black; ">{{ css.summary }}</p>
                             <hr>
-                            <p><a class="btn btn-sm btn-outline-primary" href="{% url 'css_detail' css.id %}"
+                            <p><a class="btn btn-sm btn-outline-primary" href="{% url 'css_detail' css.pk %}"
                                     style="font-size: 12px;">study</a>
                             </p>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
-                <p><a class="btn btn-sm btn-outline-primary" href="{% url 'codeacademy' %}" style="font-size: 16px;">Back "2"
+                <p><a class="btn btn-sm btn-outline-primary" href="{% url 'codeacademy' %}"
+                        style="font-size: 16px;">Back "2"
                         CodeAcademy</a>
                 </p>
                 <br>

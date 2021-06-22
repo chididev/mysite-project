@@ -1,8 +1,8 @@
 from django.urls import path
 from . import views
-from python.views import *
+from django.views.generic import *
 
 urlpatterns = [
-    path('python/', views.python, name='python'),
-    path('<int:python_id>/', views.python_detail, name="python_detail"),
+    path('python/', views.PythonView.as_view(), name='python'),
+    path('<pk>/python_detail/', views.PythonDetail.as_view(), name="python_detail"),
 ]

@@ -1,9 +1,7 @@
 from django.urls import path
 from . import views
-from codeacademy.views import *
+from django.views.generic import *
 
 urlpatterns = [
-    path('', views.codeacademy, name='codeacademy'),
-    path('html/', views.html, name='html'),
-    path('<int:html_id>/', views.html_detail, name="html_detail"),
+    path('', views.AcademyView.as_view(), name='codeacademy'),
 ]

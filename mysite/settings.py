@@ -50,15 +50,11 @@ INSTALLED_APPS = [
     'home',
     'codeacademy',
     'contact_us',
+    'htmlacademy',
     'cssacademy',
     'python',
     'djangocourse',
-
-    # DJANGO ALL-AUTH APPS
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    'users',
 
     # DJANGO CRISPY FORM
     'crispy_forms',
@@ -66,15 +62,6 @@ INSTALLED_APPS = [
 
 # DJANGO CRISPY FORM CONFIGURATIONS
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-# DJANGO ALL-AUTH AUTHENTICATION BACKEND
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-ACCOUNT_EMAIL_VERIFICATION = "none"
 
 # GOOGLE SMTP CONFIGURATIONS
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -89,7 +76,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     # WHITENOISE MIDDLEWARE CONFIGURATION
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    # DJANGO MIDDLEWARE CONFIGURATIONS
+    # DJANGO MIDDLEWARE CONFIGURATIONS CONTINUED
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -188,26 +175,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# DJANGO ALL-AUTH CONFIGURATIONS
-SITE_ID = 1
-
-ACCOUNT_EMAIL_REQUIRED = True
-
-ACCOUNT_USERNAME_REQUIRED = True
-
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
-
-ACCOUNT_SESSION_REMEMBER = True
-
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
-
-ACCOUNT_UNIQUE_EMAIL = True
+# AUTHENTICATION REDIRECT CONFIGURATIONS
 
 LOGIN_REDIRECT_URL = 'home'
 
-SIGNUP_REDIRECT_URL = 'home'
-
-ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 # DJANGO HEROKU LOCALS
 django_heroku.settings(locals())

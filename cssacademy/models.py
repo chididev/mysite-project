@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -14,5 +15,5 @@ class Css(models.Model):
     def summary(self):
         return self.body[:100]
 
-    def pub_date_pretty(self):
-        return self.pub_date.strftime('%b %e %Y')
+    def get_absolute_url(self):
+        return reverse("css_detail", kwargs={"pk": self.pk})

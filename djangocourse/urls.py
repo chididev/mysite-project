@@ -1,8 +1,8 @@
 from django.urls import path
 from . import views
-from codeacademy.views import *
+from django.views.generic import *
 
 urlpatterns = [
-    path('django/', views.django, name='django'),
-    path('<int:django_id>/', views.django_detail, name='django_detail'),
+    path('django/', views.DjangoView.as_view(), name='django'),
+    path('<pk>/django_detail', views.DjangoDetail.as_view(), name='django_detail'),
 ]

@@ -24,9 +24,10 @@ urlpatterns = [
     path('portfolio/', include('portfolio.urls')),
     path('blog/', include('blog.urls')),
     path('codeacademy/', include('codeacademy.urls')),
-    path('accounts/', include('allauth.urls')),
     path('contact/', include('contact_us.urls')),
+    path('html5/', include('htmlacademy.urls')),
     path('css3/', include('cssacademy.urls')),
     path('python/', include('python.urls')),
     path('django/', include('djangocourse.urls')),
+    path('accounts/', include('users.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
