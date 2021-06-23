@@ -5,6 +5,7 @@ from users.forms import RegisterForm
 # Create your views here.
 
 
+# this is the user registeration logic
 def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)

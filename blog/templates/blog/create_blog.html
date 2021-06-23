@@ -2,14 +2,16 @@
 {% load static %}
 {%load crispy_forms_tags %}
 {% block content %}
+<!-- this handles the blog creation page -->
 <main role="main">
-    <div class="container pt-3 pb-4" style = "text-align:center; text-transform: capitalize; color: #0487D5;">
+    <div class="container pt-3 pb-4" style="text-align:center; text-transform: capitalize; color: #0487D5;">
         <h2>Create Blog Post </h2>
     </div>
-    <div class="container-fluid row g-3 align-items-center pb-3" style = "background-color: #0487D5; color: #FFFFFF;width:auto;">
+    <div class="container-fluid row g-3 align-items-center pb-3"
+        style="background-color: #0487D5; color: #FFFFFF;width:auto;">
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-                {{form|crispy}}
+            {{form|crispy}}
             <br>
             <button type="submit" class="btn btn-outline-light">Create Post</button>
         </form>

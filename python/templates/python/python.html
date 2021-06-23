@@ -1,6 +1,7 @@
 {% extends 'main_courses.html' %}
 {% load static %}
 {% block content %}
+<!-- handles the python academy page -->
 <div class="album" style="background-color: #FFFFFF;" id="#">
     <div class="container-fluid">
         <div class="container pt-2" style="text-align:center; color:#0487D5; ">
@@ -9,8 +10,10 @@
                 {% for python in pythons.all %}
                 <div class="col-md-3">
                     <div class="card mb-4 box-shadow">
-                        <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:18px;">{{ python.title }}</h5>
-                        <img class="card-img-top" src="{{ python.image.url }}" alt="Card image cap" height=100 width=100>
+                        <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:18px;">{{
+                            python.title }}</h5>
+                        <img class="card-img-top" src="{{ python.image.url }}" alt="Card image cap" height=100
+                            width=100>
                         <div class="card-body">
                             <p class="card-text" style="text-align: justify; color:black; ">{{ python.summary }}</p>
                             <hr>
@@ -21,7 +24,8 @@
                     </div>
                 </div>
                 {% endfor %}
-                <p><a class="btn btn-sm btn-outline-primary" href="{% url 'codeacademy' %}" style="font-size: 16px;">Back "2"
+                <p><a class="btn btn-sm btn-outline-primary" href="{% url 'codeacademy' %}"
+                        style="font-size: 16px;">Back "2"
                         CodeAcademy</a>
                 </p>
                 <br>

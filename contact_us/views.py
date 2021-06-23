@@ -6,6 +6,7 @@ from django.conf import settings
 
 
 # Create your views here.
+# This is the logic behind the contact us form
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

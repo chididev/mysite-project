@@ -3,6 +3,7 @@ from django.urls import reverse
 # Create your models here.
 
 
+# html model
 class Html(models.Model):
     title = models.CharField(max_length=500, null=True)
     image = models.ImageField(upload_to='images/', null=True)

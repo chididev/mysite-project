@@ -1,22 +1,24 @@
 {% extends 'main_blogdetail.html' %}
 {% load static %}
 {% block content %}
-<div class="album pt-2" style = "background-color:#FFFFFF;text-align: justify;">
+<!-- Handles the blog detail page -->
+<div class="album pt-2" style="background-color:#FFFFFF;text-align: justify;">
   <div class="container">
     <div class="row">
-    <div class="col-md-12">
-      <h4 style="text-transform: capitalize; text-align: center; font-size:18px; color: #0487D5;">{{ blog.title }}</h4>
-      <div class="card mb-4 box-shadow">
-        <img class="card-img-top image-fluid" src="{{ blog.image.url }}" alt="Card image cap" height=300 width=400>
-        <div class="card-body">
-          <p class="card-text" style="text-align: justify; font-size: 15px;">{{ blog.body }}</p>
-          <hr>
-          <p class="card-text" style="font-size:13px; color: black;">Created on {{ blog.pub_date_pretty }} by <span
-              style="text-transform: capitalize;">{{ blog.blogger }}</span></p>
+      <div class="col-md-12">
+        <h4 style="text-transform: capitalize; text-align: center; font-size:18px; color: #0487D5;">{{ blog.title }}
+        </h4>
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top image-fluid" src="{{ blog.image.url }}" alt="Card image cap" height=300 width=400>
+          <div class="card-body">
+            <p class="card-text" style="text-align: justify; font-size: 15px;">{{ blog.body }}</p>
+            <hr>
+            <p class="card-text" style="font-size:13px; color: black;">Created on {{ blog.pub_date_pretty }} by <span
+                style="text-transform: capitalize;">{{ blog.blogger }}</span></p>
+          </div>
         </div>
       </div>
     </div>
-   </div>
   </div>
   <div class="album pt-2 pb-2" style="background-color:#FFFFFF;text-align: center;">
     <div class="container-fluid pb-2">
@@ -24,5 +26,5 @@
       <a class="btn btn-outline-primary btn-sm" href="{% url 'blog' %}" style="font-size: 12px;">Back"2"Blog</a>
       <a class="btn btn-outline-primary btn-sm" href="#" style="font-size: 12px;">Back"2"Top</a>
     </div>
-</div>
-{% endblock %}
+  </div>
+  {% endblock %}
